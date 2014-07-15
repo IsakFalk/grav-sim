@@ -85,8 +85,8 @@ class Plot(object):
         for i in range(0, n):
             x = uniform(0., 8.)
             y = uniform(-8.0, 0.)
-            vx = uniform(0., 1.)
-            vy = uniform(0., 1.)
+            vx = uniform(0., 1.5)
+            vy = uniform(0., 1.5)
             planets.append(Planet.Planet(x, y, vx, vy))
     
         show(block = False)
