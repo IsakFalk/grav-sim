@@ -72,6 +72,7 @@ class Plot(object):
                 s1.remove()
                 up.update(p)
                 
+    #plots n planets randomly in the third quadrant of the coordinate system
     def plotn(self, n, up, dots = False):
     
         scatter(0.0, 0.0, 400, '#FFFF30')
@@ -82,13 +83,15 @@ class Plot(object):
         planets = []
         s_list = []
         
+        #fill out the planet list
         for i in range(0, n):
             x = uniform(0., 8.)
             y = uniform(-8.0, 0.)
             vx = uniform(0., 1.)
             vy = uniform(0., 1.)
             planets.append(Planet.Planet(x, y, vx, vy))
-    
+        
+        #Essentially the same working as plot_dynamic but handle n planets instead of 1.    
         show(block = False)
         k = 0
         while True:
