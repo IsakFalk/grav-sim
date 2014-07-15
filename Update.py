@@ -1,6 +1,7 @@
 #The Update class
 class Update(object):
     
+    #Takes a Leapfrog object as an argument
     def __init__(self, leap):
         self.leap = leap
 
