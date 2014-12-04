@@ -21,7 +21,7 @@ class Plot(object):
         #the two lists which we fill out with x and y of the planet
         l1 = []
         l2 = []
-    
+        #filling up the lists with the position of the planet(s)
         for i in range(0, n):
             if ((p.x**2 + p.y**2)**0.5 < 0.2):
                 break
@@ -37,6 +37,7 @@ class Plot(object):
         scatter(X, Y, 10)
         scatter(0.0, 0.0, 400, '#FFFF30')
         
+        #set screen limits
         ylim(-8, 8)
         xlim(-8, 8)  
 
@@ -46,7 +47,8 @@ class Plot(object):
     def dynamic_plot(self, up, p1, dots = True):
         #initiating a copy of the given planet and a scatter of the sun
         p = Planet.Planet(p1.x, p1.y, p1.vx, p1.vy)
-
+        
+        #Set sun object with corresponding colour in hex
         scatter(0.0, 0.0, 400, '#FFFF30')
     
         #set axes
