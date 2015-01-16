@@ -111,3 +111,11 @@ class Plot(object):
                 if dots == False:
                     s_list[i].set_visible(False)
                 up.update(planets[i])
+
+if __name__ = "__main__":
+    p1 = Planet.Planet(5., -3., 0.55, 0.4)
+    leap = Leapfrog.Leapfrog(5., 0.7, 0.2)
+    up = Update.Update(leap)
+    
+    plotn(10, up, dots = False)
+    
